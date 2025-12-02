@@ -1,9 +1,3 @@
-﻿int[,] array = { { -5, 7, -4 }, { 10, -12, -4 }, { 14, 8, 3 } };
-int rowSum = 0;
-
-for (int j = 0; j < array.GetLength(1); j++)
-{
-    rowSum += array[1, j];
-}
-
-Console.WriteLine(rowSum.ToString());
+﻿double x = 1;
+double result = 5 * Math.Pow(x, 2) + 2 * x - 1;
+Console.WriteLine(result);
