@@ -1,9 +1,10 @@
-﻿int[] values = { 14, 0, 23, 0, -10, 25, 17, 17, 15, 6, 24, -1, -5, -7, 24, 8, 21, 4, 1, 5 };
-
-foreach (int value in values)
+﻿string content = "DSADlJHSADGtASUIyDSrkAN";
+string newContent = "";
+foreach (char c in content)
 {
-    if (value % 3 == 0)
+    if (!char.IsUpper(c))
     {
-        Console.WriteLine(value);
+        newContent += c;
     }
 }
+Console.WriteLine(String.Join("\n", newContent));
