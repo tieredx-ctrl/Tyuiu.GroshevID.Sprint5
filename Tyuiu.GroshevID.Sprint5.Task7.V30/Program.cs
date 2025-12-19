@@ -19,22 +19,27 @@ internal class Program
         Console.WriteLine("* УСЛОВИЕ:                                                                *");
         Console.WriteLine("* Дан файл ... (файл взять из архива согласно вашему варианту.            *");
         Console.WriteLine("* Создать папку в ручную ... и скопировать в неё файл) в котором есть     *");
-        Console.WriteLine("* набор символьных данных.Заменить все однозначные числа на число 9.      *");
+        Console.WriteLine("* набор символьных данных. Заменить все однозначные числа на число 9.     *");
         Console.WriteLine("* Полученный результат сохранить в файл OutPutDataFileTask7V30.txt.       *");
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
         Console.WriteLine("***************************************************************************");
 
-        string path = Path.GetTempPath();
-        path = Path.Combine(path, "OutPutFileTask7V30.txt");
+        string path = Path.Combine(@"C:\DataSprint5", "InPutDataFileTask7V30.txt");
 
-        string pathSaveFile = $@"";
+        string tempDir = Path.GetTempPath();
+        string pathSaveFile = Path.Combine(tempDir, "OutPutDataFileTask7V30.txt");
+
+        Console.WriteLine("Данные находятся в файле: " + path);
 
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
         Console.WriteLine("***************************************************************************");
 
-        Console.WriteLine();
+        Console.WriteLine("Находится в файле: ");
+        pathSaveFile = ds.LoadDataAndSave(path);
+
+        Console.WriteLine(pathSaveFile);
 
         Console.ReadKey();
     }
