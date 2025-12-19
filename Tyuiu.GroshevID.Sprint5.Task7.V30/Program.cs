@@ -26,7 +26,7 @@ internal class Program
         Console.WriteLine("***************************************************************************");
 
         string path = Path.GetTempPath();
-        path = Path.Combine(path, "OutPutFileTask5.txt");
+        path = Path.Combine(path, "OutPutFileTask7V30.txt");
 
         string pathSaveFile = $@"";
 

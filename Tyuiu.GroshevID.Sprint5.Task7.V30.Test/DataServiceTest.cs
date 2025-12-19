@@ -8,7 +8,7 @@ namespace Tyuiu.GroshevID.Sprint5.Task7.V30.Test
         [TestMethod]
         public void CheckedExistsFile()
         {
-            string path = @"С:\DataSprint5\InPutDataFileTask7V30.txt";
+            string path = Path.Combine(@"C:\DataSprint5", "InPutDataFileTask7V30.txt");
 
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
